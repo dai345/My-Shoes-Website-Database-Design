@@ -1,0 +1,125 @@
+START TRANSACTION;
+CREATE DATABASE shop;
+USE shop;
+CREATE TABLE address
+(
+ 	address_id int NOT NULL AUTO_INCREMENT,
+ 	street VARCHAR(200),
+ 	city VARCHAR(100),
+ 	state CHAR(20),
+ 	zip VARCHAR(10),
+ 	PRIMARY KEY (address_id)
+);
+
+CREATE TABLE customer
+(
+ 	customer_id int NOT NULL AUTO_INCREMENT,
+ 	first_nm VARCHAR(100),
+ 	last_nm VARCHAR(100),
+ 	middle_nm VARCHAR(100),
+ 	phone_num VARCHAR(20),
+ 	username VARCHAR(40),
+ 	password VARCHAR(100),
+ 	temp_user CHAR(1),		-- temp_user 'Y/N' will be the flag for one-time guest or perm user.
+ 	address_id int,
+ 	PRIMARY KEY (customer_id),
+ 	FOREIGN KEY (address_id) REFERENCES address(address_id)
+);
+
+CREATE TABLE credit_card
+(
+ 	credit_card_id int NOT NULL AUTO_INCREMENT,
+ 	customer_id int,
+ 	bill_address_id int,
+ 	holder_nm VARCHAR(200),
+ 	card_num VARCHAR(20),
+ 	exp_month int,
+ 	exp_year int,
+ 	sec_code CHAR(3),
+ 	PRIMARY KEY (credit_card_id),
+ 	FOREIGN KEY (bill_address_id) REFERENCES address(address_id),
+ 	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);
+
+CREATE TABLE product
+(
+ 	product_id int NOT NULL AUTO_INCREMENT,
+ 	brand VARCHAR(100),
+ 	gender VARCHAR(10),
+ 	style VARCHAR(10),
+ 	product_name VARCHAR(200),
+ 	product_description VARCHAR(1000),
+ 	price DOUBLE(32, 2),
+ 	product_pic VARCHAR(300),	-- product_pic will be the image file name and will be used to retrieve image from image folder
+ 	PRIMARY KEY (product_id)  
+);
+
+CREATE TABLE shopping_cart
+(
+ 	shopping_cart_id int NOT NULL AUTO_INCREMENT,
+ 	customer_id int,
+ 	PRIMARY KEY (shopping_cart_id),
+ 	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);
+
+
+CREATE TABLE cart_item
+(
+ 	cart_item_id int NOT NULL AUTO_INCREMENT,
+ 	shopping_cart_id int,
+ 	product_id int,
+ 	product_amount int,
+ 	total_price DOUBLE(32, 2),
+ 	PRIMARY KEY (cart_item_id),
+ 	FOREIGN KEY (shopping_cart_id) REFERENCES shopping_cart(shopping_cart_id),
+ 	FOREIGN KEY (product_id) REFERENCES product(product_id)
+);
+
+CREATE TABLE customer_order
+(
+ 	order_id int NOT NULL AUTO_INCREMENT,
+ 	customer_id int,
+ 	paid_credit_card_id int,
+ 	order_date date,
+ 	total_cost DOUBLE(32, 2),
+ 	PRIMARY KEY (order_id),
+ 	FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+ 	FOREIGN KEY (paid_credit_card_id) REFERENCES credit_card(credit_card_id)
+);
+
+CREATE TABLE order_item
+(
+ 	order_item_id int NOT NULL AUTO_INCREMENT,
+ 	product_id int,
+ 	order_id int,
+ 	product_amount int,
+ 	total_price DOUBLE(32, 2),
+ 	PRIMARY KEY (order_item_id),
+ 	FOREIGN KEY (order_id) REFERENCES customer_order(order_id),
+ 	FOREIGN KEY (product_id) REFERENCES product(product_id)
+);
+
+
+CREATE TABLE browser_history  -- record user's most recent 10 browser history.
+(
+ 	browser_history_id int NOT NULL AUTO_INCREMENT,
+ 	customer_id int,
+ 	product_id int,
+ 	PRIMARY KEY (browser_history_id)
+);
+
+
+create table customer_review
+(
+ 	review_id int NOT NULL AUTO_INCREMENT,
+ 	custmoer_id int,
+ 	product_id int,
+ 	review_date date,
+ 	rate int,
+ 	description varchar(1000),
+ 	PRIMARY KEY (review_id)
+);
+
+insert into customer (username, password) values ('db_manager', 'db_pwd'), ('company_manager', 'company_pwd');
+
+COMMIT;

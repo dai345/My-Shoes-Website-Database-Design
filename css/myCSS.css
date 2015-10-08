@@ -1,0 +1,20 @@
+.jumbotron h1 {
+	color: blue;
+}
+
+.jumbotron p {
+	color: green;
+}
+
+.search {
+	color: red;
+}
+
+.clear			{ clear:both; }
+.photo-link		{ padding:5px; margin:5px; border:2px solid #ccc; display:block;  float:left; }
+.photo-link:hover	{ border-color:#999; }
+.pay_button {
+    width:200px;
+    display:inline-block;
+    
+}

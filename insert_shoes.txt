@@ -1,0 +1,197 @@
+﻿START TRANSACTION;
+Use shop;
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('business', 'male', 'Calvin Klein','Calvin Klein Brodie Oxford', 'Elegant with modern appeal, 
+	this classic leather oxford will instantly update your business attire. It\'s a wardrobe essential that 
+	you\'ll will be wearing for seasons to come.', 110, 'ck1.jpg');
+
+	insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'male', 'Nike','Men\'s FS Lite Run 2 Running Shoe', 'Beat your best time in the Nike Flex Show Lite Run 2.',
+	 80, 'nike1.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('business', 'female', 'Calvin Klein','Calvin Klein Annika','Annika likes to be known as the fashionista at work. Pair this sexy sandal with an A-line skirt to achieve just that.
+Contemporary strappy sandal features a soft microsuede upper.
+Show off your latest pedicure with the open toe silhouette.', 51, 'ck2.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'female', 'Nike','Nike Free','Free your spirit with each liberating stride you take in the Free 5.0 14 from Nike!
+Boasts natural flexibility for a variety of runners.
+Designed to allow feet to move more naturally and freely, building strength over time. ', 59, 'nk2.jpg');
+
+
+/*addidas*/
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'male', 'Adidas','Adidas F30 TRX FG W', 'Take on any defender with the adidas F30 TRX FG W,
+	 you\'ll cut through them like a hot knife through butter. 
+	 Lightweight soccer shoe built for speed and consistency.', 33, 'addidas1.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'female', 'Adidas','Adidas Golf adiZERO Sport II', 'For the woman who wants to finish strong from tee off to the 18th hole,
+	 the adiZERO Sport II spikeless golf shoes from adidas Golf will be her go-to shoe!. Ultralightweight,
+	  waterproof and breathable performance mesh upper with climaproof protection.', 55, 'addidas2.jpg');
+
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'female', 'Adidas','Adidas Y-3 by Yohji Yamamoto Sukita II', 'Show off some seriously hot style with the adidas Y-3 Sukita II wedge.
+	 Leather and mixed material upper. Brand name printed at the sides, logo at back.', 220, 'addidas3.jpg');
+
+
+/*Puma*/
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'male', 'Puma','PUMA Liga Suede Classic', 'The Liga Suede Classic from PUMA is an all-round talent from the PUMA Archive!
+	 Premium suede leather upper for comfort and durability. Lightly padded collar for comfort.', 36, 'puma1.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'female', 'Puma','PUMA Sport Fashion McQ Move Mid', 'Blend the lines between style and function with the versatile designs of PUMA Sport Fashion.
+	 Leather upper with tonal stitching and mesh panels. High-top sneaker silhouette.', 132, 'puma2.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'female', 'Puma','PUMA Golf Biofusion', 'Take full control of the course with the tech-savvy PUMA Golf Biofusion! 
+	 Midfoot engineering with supportive lace closure that wraps around the midfoot to maximize support and stabilize the foot during side-to-side movement.', 54, 'puma3.jpg');
+
+/*New Balance*/
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'female', 'New Balance','New Balance W1260v3', 'Go on and go the extra mile with confidence when you ride in the supportive W1260v3 from New Balance.
+Built for the moderate overpronator who requires a combination of enhanced cushioning and support. Breathable mesh upper with durable synthetic overlays. ', 100, 'nb1.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'male', 'New Balance','New Balance ML501', 'Paired with your freshest denims—the ML501 sneakers from New Balance Classics blends old-school design with wicked street style!
+Nylon upper with suede panels for comfort and durability.Lightly padded collar for a snug, comfy fit.', 55, 'nb2.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('athletic', 'male', 'New Balance','New Balance M890v4', 'It\'s not uncommon to gape in amazement at the lightweight, buttery smooth ride of the M890v4 from New Balance.
+Built for the neutral to underpronator looking for lightweight cushioning.Successor to the W890v3, SKU# 8060159. ', 60, 'nb3.jpg');
+
+/*Danner*/
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'male', 'Danner','Danner MT Tabor', 'Add a confident look to your everyday grind with the classic style of the Danner Mt. Tabor shoe!
+Durable suede upper. Built on the 971 last for a true-to-size fit.', 80, 'dan1.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'male', 'Danner','Danner Williams Chukka Oiled', 'The Danner Williams Chukka Oiled is an urban shoe designed with the same durability and and comfort of a traditional boot, but offers a more lightweight and simple silhouette for everyday wear.
+Part of the Stumptown Collection.Oiled leather upper with clean stitching detail.', 140, 'dan2.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'male', 'Danner','Danner Danner Light Woodlawn', 'The Danner Light Woodlawn is a tough work boot that has the ideal amount of waterproof protection, flexibility, and cushioning to see you through the day in total comfort.
+Danner recommends sizing a half size down for the best fit. This boot was designed on their 650 EE last, which offers a roomier fit without sacrificing support and stability.', 207, 'dan3.jpg');
+
+/*Lacoste*/
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'female', 'Lacoste','Lacoste Ziane Sneaker Met', 'Your style just continues to shine with the Ziane Sneaker Met.
+Fine leather and textile upper.
+Lace-up closure with metal eyelets.', 69, 'la1.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'female', 'Lacoste','Lacoste Glendon Espa 4', 'Invigorate your casual and sporty look with the Lacoste™ Glendon Espa 4!
+Textile upper.
+Lace-up closure.
+Textile lining.
+Synthetic footbed.
+Jute-wrapped midsole.', 58, 'la2.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'male', 'Lacoste','Lacoste Sauville 6', 'Make your mark on the day in style with the Lacoste™ Sauville 6.
+Leather upper with tonal stitching.
+Lace up front closure.
+Lacing and metal eyelet detail at collar.
+Stitched moc toe.', 62, 'la3.jpg');
+
+/*Steve Madden*/
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('business', 'female', 'Steve Madden','Steve Madden Lannaa', 'It\'s a marvelous night for a dance under the stars! Get swept away in these stunning Steve Madden pumps!
+Easy slip-on wear.
+Rich suede upper with sparkling stud detail.', 55, 'st1.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('business', 'male', 'Steve Madden','Steve Madden P-Lesko', 'Demand more of your vintage style with the P-Lesko lace-up oxford.
+Premium leather upper.
+Traditional lace closure.
+Smooth leather lining.
+Lightly padded footbed.', 44, 'st2.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('business', 'male', 'Steve Madden','Steve Madden Kapitol', 'Just the touch of elegance you have been waiting for!
+Square-toe oxford.
+Satin finish on the leather upper with perforated trim detail.
+Traditional lace-up closure for an adjustable and custom fit.
+Soft man-made lining for a great foot feel.', 39, 'st3.jpg');
+
+/*SKECHERS*/
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'female', 'Skechers','SKECHERS SKCH 3 Plus - Warm Ups','Take your look to a whole new level with these wicked wedge sneaks!
+Four-strap hook-and-loop closure.
+Rich suede upper.
+Matching or contrast colored canvas panels.
+Perforated suede front panel.', 69, 'sk1.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'female', 'Skechers','SKECHERS Bikers - Cross Walk','Head out for a casual lunch with your girlfriends in these Bikers - Cross Walk slip-ons from SKECHERS.
+Fabric upper.
+Slip-on construction.
+Moc toe.
+Tonal stitching.', 32, 'sk2.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'male', 'Skechers','Mark Nason SKECHERS Harwood','The handsome Harwood oxfords from SKECHERS are a stylish choice for dressing up your casual wardrobe.
+Classic saddle shoe features a leather and suede upper.
+Lace-up closure.', 41, 'sk3.jpg');
+
+
+/*other*/
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('business', 'female', 'Sesto Meucci','Sesto Meucci Akela','Make a statement with this seriously fashionable sandal, the Akela by Sesto Meucci.
+Upper carefully crafted with patent leather.
+Sandal features a single strap above the toes with a slingback style strap and buckled ankle strap closure.', 115, 'other1.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('business', 'female', 'Clarks','Clarks Trista Zest','Add some spice to your wardrobe!
+Perforated leather upper.
+Fabric lining.
+Suede footbed lining.
+Lightly padded footbed.', 62, 'other2.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('business', 'female', 'Nine West','Nine West Risktaker','Maintain your sophistication with this Nine West Risktaker.
+Leather upper.
+Back-zip closure with elastic panel on ankle.
+Open-toe design.', 75, 'other3.jpg');
+
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('business', 'female', 'Melissa','Melissa Shoes Ballet Heel','Back-zip closure with elastic panel on ankle.
+Open-toe design.
+Synthetic lining and footbed.
+Man-made outsole.
+Stacked wedge heel.', 109, 'other4.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('business', 'male', 'Cole Haan','Cole Haan Great Jones Wingtip II','Some show good, you show more with the Great Jones Wingtip II.
+Suede upper.
+Lace-up closure.
+Detailed stitching.
+Synthetic lining.', 139, 'other5.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'male', 'Original Penguin','Original Penguin Costa','Hit the beach in the Original Penguin Costa sandals.
+Leather upper.
+Synthetic lining and insole.
+Textured synthetic outsole.
+Imported.', 49, 'other6.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'male', 'GUESS','GUESS Jamesport','Adorn yourself in renowned style with GUESS.
+Fabric and man-made upper with tonal stitching.
+Lace up front closure with blind eyelets.
+Brand logo hits at side.
+Soft fabric lining and insole.', 47, 'other7.jpg');
+
+insert into product (style, gender, brand, product_name, product_description, price, product_pic) 
+	values ('casual', 'male', 'Cole Haan', 'Cole Haan Super comfort', 'Maintain your style and comfort while on the go with the Quincy Sport Ox II.
+Leather upper.
+Lace-up closure with metal eyelets.
+Detailed stitching.
+Soft fabric lining and footbed.', 117, 'other8.jpg');
+
+COMMIT;
+
